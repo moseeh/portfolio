@@ -19,6 +19,8 @@ type PageData struct {
 	Skills       []string
 	Projects     []Project
 	ContactEmail string
+	Twitter      string
+	LinkedIn     string
 }
 
 func main() {
@@ -33,9 +35,10 @@ func main() {
 
 func handleHome(w http.ResponseWriter, r *http.Request) {
 	data := PageData{
-		Name:  "MOSES OTIENO",
+		Name:  "MOSES OTIENO ONYANGO",
 		Title: "Apprentice Software Developer at Zone 01 Kisumu",
-		About: "A passionate developer with experience in Go, JavaScript, Rust and web technologies.",
+		About: "I am an apprentice software developer at Zone 01 Kisumu with a passion for building efficient and innovative solutions. With experience in languages like Go, JavaScript, and Rust, I enjoy tackling challenging problems and constantly learning new tools and frameworks. I have worked on projects that involve systems programming, web development, and command-line tools, gaining hands-on experience with the full stack. My goal is to deepen my expertise in software development while contributing to projects that make a positive impact. I am driven by curiosity, dedication, and a commitment to developing practical, user-friendly software solutions.",
+
 		Skills: []string{
 			"Go", "JavaScript", "HTML", "CSS", "Rust",
 			"Git", "REST APIs", "PostgreSQL",
@@ -52,12 +55,14 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				GitHubURL:   "https://github.com/moseeh/Go-Projects/tree/main/my-ls-1",
 			},
 			{
-				Title: "lem-in",
+				Title:       "lem-in",
 				Description: "A program that descibes an ant colony and generates paths and turns ants need to make from start to end",
-				GitHubURL: "https://github.com/moseeh/Go-Projects/tree/main/lem-in",
+				GitHubURL:   "https://github.com/moseeh/Go-Projects/tree/main/lem-in",
 			},
 		},
 		ContactEmail: "mosesadrian825@gmail.com",
+		Twitter:      "mosesotienoo",
+		LinkedIn:     "moses-otieno-7a24b8248",
 	}
 
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
