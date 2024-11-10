@@ -36,7 +36,7 @@ func main() {
 func handleHome(w http.ResponseWriter, r *http.Request) {
 	data := PageData{
 		Name:  "MOSES OTIENO ONYANGO",
-		Title: "Apprentice Software Developer at Zone 01 Kisumu",
+		Title: "Apprentice Software Developer at Zone01 Kisumu",
 		About: "I am an apprentice software developer at Zone 01 Kisumu with a passion for building efficient and innovative solutions. With experience in languages like Go, JavaScript, and Rust, I enjoy tackling challenging problems and constantly learning new tools and frameworks. I have worked on projects that involve systems programming, web development, and command-line tools, gaining hands-on experience with the full stack. My goal is to deepen my expertise in software development while contributing to projects that make a positive impact. I am driven by curiosity, dedication, and a commitment to developing practical, user-friendly software solutions.",
 
 		Skills: []string{
