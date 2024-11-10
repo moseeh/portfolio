@@ -59,6 +59,21 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				Description: "A program that descibes an ant colony and generates paths and turns ants need to make from start to end",
 				GitHubURL:   "https://github.com/moseeh/Go-Projects/tree/main/lem-in",
 			},
+			{
+				Title:       "my-Sudoku",
+				Description: "A program that uses the backtracking algorithm to solve the sudoku puzzle",
+				GitHubURL:   "https://github.com/moseeh/my-sudoku",
+			},
+			{
+				Title: "Kilimo-chain",
+				Description: "A blockchain based program that offers transparency of goods from the farm to the market",
+				GitHubURL: "https://github.com/moseeh/kilimo-link",
+			},
+			{
+				Title: "Groupie Tracker",
+				Description: "A Go-based Program that reads data from a JSON API and displays it on a webpage",
+				GitHubURL: "https://github.com/moseeh/Go-Projects/tree/main/groupie-tracker",
+			},
 		},
 		ContactEmail: "mosesadrian825@gmail.com",
 		Twitter:      "mosesotienoo",
