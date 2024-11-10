@@ -1,0 +1,68 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Name}} - Portfolio</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">{{.Name}}</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>{{.Name}}</h1>
+        <h2>{{.Title}}</h2>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>{{.About}}</p>
+        <div class="skills">
+            <h3>Skills</h3>
+            <div class="skills-grid">
+                {{range .Skills}}
+                <span class="skill-tag">{{.}}</span>
+                {{end}}
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            {{range .Projects}}
+            <div class="project-card">
+                <img src="{{.ImageURL}}" alt="{{.Title}}">
+                <h3>{{.Title}}</h3>
+                <p>{{.Description}}</p>
+                <div class="project-links">
+                    <a href="{{.GitHubURL}}" target="_blank">GitHub</a>
+                    <a href="{{.LiveURL}}" target="_blank">Live Demo</a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Get in touch at: <a href="mailto:{{.ContactEmail}}">{{.ContactEmail}}</a></p>
+    </section>
+
+    <footer>
+        <p>© {{.Name}} 2024</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
