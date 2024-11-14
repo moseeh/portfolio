@@ -356,12 +356,14 @@ section h2 {
   background-color: var(--primary-color);
   border-radius: 1.5rem;
   cursor: pointer;
+  width: 100%;
+
 }
 
 
 .email-icon {
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
 }
 
 /* Footer */
