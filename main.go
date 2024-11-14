@@ -40,13 +40,13 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 		About: "I am an apprentice software developer at Zone 01 Kisumu with a passion for building efficient and innovative solutions. With experience in languages like Go, JavaScript, and Rust, I enjoy tackling challenging problems and constantly learning new tools and frameworks. I have worked on projects that involve systems programming, web development, and command-line tools, gaining hands-on experience with the full stack. My goal is to deepen my expertise in software development while contributing to projects that make a positive impact. I am driven by curiosity, dedication, and a commitment to developing practical, user-friendly software solutions.",
 
 		Skills: []string{
-			"Go", "JavaScript", "HTML", "CSS", "Rust",
-			"Git", "REST APIs", "PostgreSQL",
+			"Go", "JavaScript", "HTML", "CSS", "Rust", "Programming",
+			"Git", "REST APIs", "SQLite", "Docker", "Unix", "Ai", "Statistics",
 		},
 		Projects: []Project{
 			{
 				Title:       "Go Projects",
-				Description: "These are projects I have done in Golang using the zone 01 kisumu Pedagogy",
+				Description: "These are projects I have done in Golang using the zone01 kisumu Pedagogy",
 				GitHubURL:   "https://github.com/moseeh/Go-Projects",
 			},
 			{
@@ -65,14 +65,14 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				GitHubURL:   "https://github.com/moseeh/my-sudoku",
 			},
 			{
-				Title: "Kilimo-chain",
+				Title:       "Kilimo-chain",
 				Description: "A blockchain based program that offers transparency of goods from the farm to the market",
-				GitHubURL: "https://github.com/moseeh/kilimo-link",
+				GitHubURL:   "https://github.com/moseeh/kilimo-link",
 			},
 			{
-				Title: "Groupie Tracker",
+				Title:       "Groupie Tracker",
 				Description: "A Go-based Program that reads data from a JSON API and displays it on a webpage",
-				GitHubURL: "https://github.com/moseeh/Go-Projects/tree/main/groupie-tracker",
+				GitHubURL:   "https://github.com/moseeh/Go-Projects/tree/main/groupie-tracker",
 			},
 		},
 		ContactEmail: "mosesadrian825@gmail.com",
