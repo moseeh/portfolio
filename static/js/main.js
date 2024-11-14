@@ -1,4 +1,3 @@
-// static/js/main.js
 document.addEventListener('DOMContentLoaded', () => {
     // Navigation scroll effect
     const nav = document.querySelector('nav');
@@ -88,20 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mobile menu toggle
-    const menuButton = document.createElement('button');
-    menuButton.classList.add('menu-toggle');
-    menuButton.innerHTML = `
-        <span></span>
-        <span></span>
-        <span></span>
-    `;
-    
-    const nav1 = document.querySelector('.nav-content');
+    const menuButton = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     
-    if (window.innerWidth <= 768) {
-        nav1.insertBefore(menuButton, navLinks);
-        
+    if (menuButton) {
         menuButton.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menuButton.classList.toggle('active');
