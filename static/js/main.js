@@ -108,37 +108,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-// Add this CSS for the menu button
-const style = document.createElement('style');
-style.textContent = `
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 25px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 10;
-    }
-
-    .menu-toggle span {
-        width: 30px;
-        height: 3px;
-        background: var(--text-color);
-        border-radius: 10px;
-        transition: all 0.3s linear;
-        position: relative;
-        transform-origin: 1px;
-    }
-
-    @media (max-width: 768px) {
-        .menu-toggle {
-            display: flex;
-        }
-    }
-`;
-document.head.appendChild(style);
