@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Otieno Onyango - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- 3D Binary Background -->
+    <div class="binary-bg" id="binaryBg"></div>
+
+    <!-- Scan lines effect -->
+    <div class="scanlines"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo" id="logoText">&lt;MO/&gt;</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">./home</a></li>
+                <li><a href="#about">./about</a></li>
+                <li><a href="#skills">./skills</a></li>
+                <li><a href="#projects">./projects</a></li>
+                <li><a href="#articles">./articles</a></li>
+                <li><a href="#contact">./contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-glitch" id="heroName" data-text="">LOADING...</h1>
+            <p class="subtitle" id="typewriter">INITIALIZING...</p>
+            <p class="description" id="heroDescription">
+                Crafting digital solutions at the intersection of innovation and functionality.
+                I transform complex problems into elegant code, building scalable applications
+                that push the boundaries of what's possible in the digital realm.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">EXECUTE_PORTFOLIO.exe</a>
+                <a href="#contact" class="btn btn-secondary">INIT_CONTACT.sh</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">SYSTEM_PROFILE</h2>
+            <div class="about-content scroll-reveal">
+                <div class="about-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="terminal-title" id="terminalTitle">moses@developer:~$ cat profile.md</div>
+                    </div>
+                    <div class="about-grid">
+                        <div class="profile-image">
+                            <div class="image-container">
+                                <img src="images/profile.jpg" alt="Moses Otieno" id="profileImg">
+                                <div class="image-overlay">
+                                    <div class="scan-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-block">
+                                <span class="info-label">NAME:</span>
+                                <span class="info-value" id="profileName">LOADING...</span>
+                            </div>
+                            <div class="info-block">
+                                <span class="info-label">ROLE:</span>
+                                <span class="info-value" id="profileRole">LOADING...</span>
+                            </div>
+                            <div class="info-block">
+                                <span class="info-label">STATUS:</span>
+                                <span class="info-value status-online">ACTIVE</span>
+                            </div>
+                            <div class="info-block">
+                                <span class="info-label">LOCATION:</span>
+                                <span class="info-value">KISUMU, KENYA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio-section">
+                        <div class="bio-header">
+                            <span class="prompt">$ </span>
+                            <span class="command">cat bio.txt</span>
+                        </div>
+                        <p class="bio-text" id="bioText">Loading profile information...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">SYSTEM_CAPABILITIES</h2>
+            <div class="skills-terminal scroll-reveal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="terminal-title">moses@developer:~$ ls -la skills/</div>
+                </div>
+                <div class="skills-grid" id="skillsGrid">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">EXECUTED_PROJECTS</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section articles" id="articles">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">PUBLISHED_ARTICLES</h2>
+            <div class="articles-terminal scroll-reveal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="terminal-title">moses@developer:~$ curl -X GET
+                        "https://dev.to/api/articles?username=moseeh_52"</div>
+                </div>
+                <div class="articles-grid" id="articlesGrid">
+                    <!-- Articles will be populated by JavaScript -->
+                </div>
+                <div class="articles-footer">
+                    <a href="https://dev.to/moseeh_52" target="_blank" class="view-all-btn">
+                        <i class="fab fa-dev"></i> VIEW_ALL_ARTICLES.sh
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">ESTABLISH_CONNECTION</h2>
+            <div class="contact-terminal scroll-reveal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="terminal-title">moses@developer:~$ ./contact_form.sh</div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info" id="contactInfo">
+                        <!-- Contact info will be populated by JavaScript -->
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <input type="text" class="form-input" placeholder="Your_Name" required>
+                            <input type="email" class="form-input" placeholder="Email_Address" required>
+                        </div>
+                        <input type="text" class="form-input" placeholder="Subject_Line" required>
+                        <textarea class="form-input form-textarea" placeholder="Message_Body" required></textarea>
+                        <button type="submit" class="submit-btn">TRANSMIT_MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links" id="socialLinks">
+            <!-- Social links will be populated by JavaScript -->
+        </div>
+        <p class="copyright">© 2025 <span id="footerName">Moses Otieno Onyango</span> | System Status: <span
+                class="status-online">ONLINE</span></p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
