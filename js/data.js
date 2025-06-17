@@ -113,13 +113,13 @@ const portfolioData = {
     //   tags: ["Go", "Systems Programming", "Unix"],
     // },
     {
-      title: "Understanding Graph Algorithms Through Ant Colony Simulation",
+      title: "Efficient File Reading in Go: Mastering bufio.NewScanner vs os.ReadFile",
       synopsis:
-        "How the lem-in project taught me about graph theory, pathfinding algorithms, and the elegance of nature-inspired computing solutions.",
-      readTime: "15 min read",
-      publishedDate: "2024-10-22",
-      url: "https://dev.to/moseeh_52/graph-algorithms-ant-colony-simulation",
-      tags: ["Graph Theory", "Algorithms", "Simulation"],
+        "Perfomance, memory usage, and use cases for each method.",
+      readTime: "4 min read",
+      publishedDate: "2024-05-16",
+      url: "https://dev.to/moseeh_52/efficient-file-reading-in-go-mastering-bufionewscanner-vs-osreadfile-4h05",
+      tags: ["Go", "File Reading"],
     },
     {
       title: "Blockchain Transparency in Agriculture: The Kilimo-Chain Story",
