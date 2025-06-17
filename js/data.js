@@ -86,13 +86,13 @@ const portfolioData = {
 
   articles: [
     {
-      title: "Building Efficient Algorithms in Go: A Zone01 Journey",
+      title: "Building Modern SPAs with Vanilla JavaScript: A Beginner's Guide",
       synopsis:
-        "Exploring the fundamentals of algorithm design and optimization through practical Go implementations. Learn how to approach complex problems with clean, efficient code.",
-      readTime: "8 min read",
-      publishedDate: "2024-12-15",
-      url: "https://dev.to/moseeh_52/building-efficient-algorithms-in-go-journey",
-      tags: ["Go", "Algorithms", "Programming"],
+        "Building Single Page Applications (SPAs) provide that smooth user experience by dynamically updating the page without requiring a full reload.",
+      readTime: "3 min read",
+      publishedDate: "2025-2-18",
+      url: "https://dev.to/moseeh_52/building-modern-spas-with-vanilla-javascript-a-beginners-guide-9a3",
+      tags: ["JS", "HTML", "Programming", "CSS", "DOM Manipulation"],
     },
     {
       title: "From Sudoku to Backtracking: Problem-Solving Patterns",
