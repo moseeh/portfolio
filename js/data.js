@@ -95,23 +95,23 @@ const portfolioData = {
       tags: ["JS", "HTML", "Programming", "CSS", "DOM Manipulation"],
     },
     {
-      title: "From Sudoku to Backtracking: Problem-Solving Patterns",
+      title: "Understanding os.Stat() vs os.Lstat() in Go: File and Symlink Handling ",
       synopsis:
-        "Deep dive into backtracking algorithms using the classic Sudoku solver as a case study. Understanding recursive thinking and constraint satisfaction.",
-      readTime: "12 min read",
-      publishedDate: "2024-11-28",
-      url: "https://dev.to/moseeh_52/sudoku-backtracking-problem-solving",
-      tags: ["Algorithms", "Recursion", "Problem Solving"],
+        "Key Differences between the two functions and when to use each one.",
+      readTime: "4 min read",
+      publishedDate: "2024-10-07",
+      url: "https://dev.to/moseeh_52/understanding-osstat-vs-oslstat-in-go-file-and-symlink-handling-3p5d",
+      tags: ["Go", "Linux", "Ubuntu", "Programming"],
     },
-    {
-      title: "Building a Linux Command Clone: Lessons from my-ls",
-      synopsis:
-        "What I learned recreating the Linux 'ls' command from scratch. File system navigation, flag handling, and the beauty of Unix philosophy.",
-      readTime: "10 min read",
-      publishedDate: "2024-11-10",
-      url: "https://dev.to/moseeh_52/building-linux-command-clone-lessons",
-      tags: ["Go", "Systems Programming", "Unix"],
-    },
+    // {
+    //   title: "Building a Linux Command Clone: Lessons from my-ls",
+    //   synopsis:
+    //     "What I learned recreating the Linux 'ls' command from scratch. File system navigation, flag handling, and the beauty of Unix philosophy.",
+    //   readTime: "10 min read",
+    //   publishedDate: "2024-11-10",
+    //   url: "https://dev.to/moseeh_52/building-linux-command-clone-lessons",
+    //   tags: ["Go", "Systems Programming", "Unix"],
+    // },
     {
       title: "Understanding Graph Algorithms Through Ant Colony Simulation",
       synopsis:
