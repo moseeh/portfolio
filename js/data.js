@@ -122,23 +122,23 @@ const portfolioData = {
       tags: ["Go", "File Reading"],
     },
     {
-      title: "Blockchain Transparency in Agriculture: The Kilimo-Chain Story",
+      title: "Getting Started with Electron: A Guide To Building Desktop Apps ",
       synopsis:
-        "Exploring how blockchain technology can revolutionize supply chain transparency in agriculture. From farm to table, building trust through code.",
-      readTime: "11 min read",
-      publishedDate: "2024-10-05",
-      url: "https://dev.to/moseeh_52/blockchain-agriculture-kilimo-chain",
-      tags: ["Blockchain", "Agriculture", "Supply Chain"],
-    },
-    {
-      title: "API Integration Patterns: Building Groupie Tracker",
-      synopsis:
-        "Best practices for consuming REST APIs in Go applications. Error handling, data parsing, and creating responsive web interfaces.",
+        "Exploring how to build cross-platform desktop applications using Electron.",
       readTime: "9 min read",
-      publishedDate: "2024-09-18",
-      url: "https://dev.to/moseeh_52/api-integration-patterns-groupie-tracker",
-      tags: ["API", "Go", "Web Development"],
+      publishedDate: "2025-06-14",
+      url: "https://dev.to/moseeh_52/getting-started-with-electron-a-guide-to-building-desktop-apps-5cm6",
+      tags: ["Electron", "JavaScript", "Desktop Apps", ],
     },
+    // {
+    //   title: "API Integration Patterns: Building Groupie Tracker",
+    //   synopsis:
+    //     "Best practices for consuming REST APIs in Go applications. Error handling, data parsing, and creating responsive web interfaces.",
+    //   readTime: "9 min read",
+    //   publishedDate: "2024-09-18",
+    //   url: "https://dev.to/moseeh_52/api-integration-patterns-groupie-tracker",
+    //   tags: ["API", "Go", "Web Development"],
+    // },
   ],
 
   social: [
