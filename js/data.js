@@ -136,7 +136,7 @@ const portfolioData = {
         "Exploring how to build command line applications using Rust and Clap.",
       readTime: "3 min read",
       publishedDate: "2025-06-20",
-      url: "https://dev.to/moseeh_52/api-integration-patterns-groupie-tracker",
+      url: "https://dev.to/moseeh_52/api-integration-patterns-ghttps://dev.to/moseeh_52/getting-started-with-clap-a-beginners-guide-to-rust-cli-apps-1n3froupie-tracker",
       tags: ["Rust", "Clap", "CLI Apps"],
     },
   ],
