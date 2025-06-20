@@ -130,15 +130,15 @@ const portfolioData = {
       url: "https://dev.to/moseeh_52/getting-started-with-electron-a-guide-to-building-desktop-apps-5cm6",
       tags: ["Electron", "JavaScript", "Desktop Apps", ],
     },
-    // {
-    //   title: "API Integration Patterns: Building Groupie Tracker",
-    //   synopsis:
-    //     "Best practices for consuming REST APIs in Go applications. Error handling, data parsing, and creating responsive web interfaces.",
-    //   readTime: "9 min read",
-    //   publishedDate: "2024-09-18",
-    //   url: "https://dev.to/moseeh_52/api-integration-patterns-groupie-tracker",
-    //   tags: ["API", "Go", "Web Development"],
-    // },
+    {
+      title: "Getting Started with Clap: A Beginner's Guide to Rust CLI Apps ",
+      synopsis:
+        "Exploring how to build command line applications using Rust and Clap.",
+      readTime: "3 min read",
+      publishedDate: "2025-06-20",
+      url: "https://dev.to/moseeh_52/api-integration-patterns-groupie-tracker",
+      tags: ["Rust", "Clap", "CLI Apps"],
+    },
   ],
 
   social: [
