@@ -2,7 +2,7 @@
 const portfolioData = {
   personal: {
     name: "MOSES OTIENO ONYANGO",
-    title: "Apprentice Software Developer at Zone01 Kisumu",
+    title: "Full Stack Software Developer",
     about:
       "I am an apprentice software developer at Zone 01 Kisumu with a passion for building efficient and innovative solutions. With experience in languages like Go, JavaScript, and Rust, I enjoy tackling challenging problems and constantly learning new tools and frameworks. I have worked on projects that involve systems programming, web development, and command-line tools, gaining hands-on experience with the full stack. My goal is to deepen my expertise in software development while contributing to projects that make a positive impact. I am driven by curiosity, dedication, and a commitment to developing practical, user-friendly software solutions.",
     location: "KISUMU, KENYA",
