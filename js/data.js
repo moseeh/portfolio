@@ -175,12 +175,12 @@ const portfolioData = {
 
   // Typewriter titles for hero section
   typewriterTitles: [
-    "APPRENTICE SOFTWARE DEVELOPER",
+    "FULL-STACK SOFTWARE DEVELOPER",
     "GOLANG ENTHUSIAST",
     "PROBLEM SOLVER",
     "CODE CRAFTSMAN",
     "SYSTEMS PROGRAMMER",
-    "FULL STACK DEVELOPER",
+    "RUSTACEAN",
   ],
 };
 
