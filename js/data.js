@@ -18,11 +18,15 @@ const portfolioData = {
 
   skills: [
     { name: "GO", proficiency: "Expert", experience: "2+ years" },
+    { name: "RUST", proficiency: "Expert", experience: "1+ year" },
     { name: "JAVASCRIPT", proficiency: "Advanced", experience: "1.5+ years" },
+    { name: "TYPESCRIPT", proficiency: "Advanced", experience: "1+ year" },
+    { name: "PYTHON", proficiency: "Intermediate", experience: "1+ year" },
+    { name: "REACT", proficiency: "Intermediate", experience: "1+ year" },
+    { name: "NODEJS", proficiency: "Intermediate", experience: "1+ year" },
     { name: "HTML", proficiency: "Advanced", experience: "2+ years" },
     { name: "CSS", proficiency: "Advanced", experience: "2+ years" },
-    { name: "RUST", proficiency: "Intermediate", experience: "1+ year" },
-    { name: "PROGRAMMING", proficiency: "Expert", experience: "2+ years" },
+    { name: "CPP", proficiency: "Intermediate", experience: "1+ years" },
     { name: "GIT", proficiency: "Advanced", experience: "2+ years" },
     { name: "REST APIS", proficiency: "Advanced", experience: "1.5+ years" },
     { name: "SQLITE", proficiency: "Intermediate", experience: "1+ year" },
