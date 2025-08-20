@@ -27,7 +27,7 @@ const portfolioData = {
     { name: "CPP", proficiency: "Intermediate", experience: "1+ years" },
     { name: "GIT", proficiency: "Advanced", experience: "2+ years" },
     { name: "REST APIS", proficiency: "Advanced", experience: "1.5+ years" },
-    { name: "SQLITE", proficiency: "Intermediate", experience: "1+ year" },
+    { name: "SQL", proficiency: "Intermediate", experience: "1+ year" },
     { name: "DOCKER", proficiency: "Intermediate", experience: "1+ year" },
     { name: "UNIX", proficiency: "Advanced", experience: "2+ years" },
     { name: "AI", proficiency: "Beginner", experience: "6+ months" },
