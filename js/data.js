@@ -97,7 +97,8 @@ const portfolioData = {
       tags: ["JS", "HTML", "Programming", "CSS", "DOM Manipulation"],
     },
     {
-      title: "Understanding os.Stat() vs os.Lstat() in Go: File and Symlink Handling ",
+      title:
+        "Understanding os.Stat() vs os.Lstat() in Go: File and Symlink Handling ",
       synopsis:
         "Key Differences between the two functions and when to use each one.",
       readTime: "4 min read",
@@ -115,9 +116,9 @@ const portfolioData = {
     //   tags: ["Go", "Systems Programming", "Unix"],
     // },
     {
-      title: "Efficient File Reading in Go: Mastering bufio.NewScanner vs os.ReadFile",
-      synopsis:
-        "Perfomance, memory usage, and use cases for each method.",
+      title:
+        "Efficient File Reading in Go: Mastering bufio.NewScanner vs os.ReadFile",
+      synopsis: "Perfomance, memory usage, and use cases for each method.",
       readTime: "4 min read",
       publishedDate: "2024-05-16",
       url: "https://dev.to/moseeh_52/efficient-file-reading-in-go-mastering-bufionewscanner-vs-osreadfile-4h05",
@@ -130,7 +131,7 @@ const portfolioData = {
       readTime: "9 min read",
       publishedDate: "2025-06-14",
       url: "https://dev.to/moseeh_52/getting-started-with-electron-a-guide-to-building-desktop-apps-5cm6",
-      tags: ["Electron", "JavaScript", "Desktop Apps", ],
+      tags: ["Electron", "JavaScript", "Desktop Apps"],
     },
     {
       title: "Getting Started with Clap: A Beginner's Guide to Rust CLI Apps ",
