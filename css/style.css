@@ -845,6 +845,9 @@ nav {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
 }
 
 .article-card:hover {
@@ -884,17 +887,27 @@ nav {
   line-height: 1.4;
 }
 
+.article-content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
 .article-synopsis {
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+}
+
+.article-footer {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
 }
 
 .article-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .article-tag {
