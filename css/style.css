@@ -685,7 +685,7 @@ nav {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   margin-top: 4rem;
 }
@@ -696,6 +696,8 @@ nav {
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .project-card:hover {
@@ -734,11 +736,13 @@ nav {
 
 .project-content {
   padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  gap: 2rem;
 }
 
 .project-description {
   color: var(--text-secondary);
-  margin-bottom: 2rem;
   line-height: 1.7;
 }
 
@@ -746,7 +750,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  align-self: end;
 }
 
 .tech-tag {
@@ -770,6 +774,7 @@ nav {
 .project-links {
   display: flex;
   gap: 2rem;
+  align-self: end;
 }
 
 .project-link {
@@ -795,6 +800,19 @@ nav {
 .project-link::after {
   content: "]";
   margin-left: 0.5rem;
+}
+
+.project-link.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: var(--text-secondary);
+  text-shadow: none;
+}
+
+.project-link.disabled:hover {
+  color: var(--text-secondary);
+  text-shadow: none;
+  transform: none;
 }
 
 /* Articles Section */
