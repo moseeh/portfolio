@@ -36,53 +36,64 @@ const portfolioData = {
 
   projects: [
     {
-      title: "Go Projects",
+      title: "Smart Road - Autonomous Traffic Simulation",
       description:
-        "These are projects I have done in Golang using the zone01 kisumu Pedagogy",
-      githubUrl: "https://github.com/moseeh/Go-Projects",
-      icon: "⚡",
-      technologies: ["Go", "Algorithms", "Data Structures"],
+        "A real-time autonomous vehicle traffic simulation built in Rust using SDL2. Implements intelligent intersection management without traffic lights, featuring collision avoidance and optimized traffic flow algorithms.",
+      githubUrl: "https://github.com/moseeh/smart-road",
+      liveUrl: null,
+      icon: "🚗",
+      technologies: ["Rust", "SDL2", "Algorithms", "Simulation", "Systems Programming"],
+      featured: true,
     },
     {
-      title: "my-ls",
+      title: "Real-Time Forum",
       description:
-        "A program that mimics the linux command line tool(ls). This program lists entries in any specified path using flags",
-      githubUrl: "https://github.com/moseeh/Go-Projects/tree/main/my-ls-1",
-      icon: "📁",
-      technologies: ["Go", "File Systems", "CLI"],
+        "A full-stack real-time forum application with WebSocket support for instant messaging. Features user authentication, session management, and live updates without page refreshes.",
+      githubUrl: "https://github.com/moseeh/real-time-forum",
+      liveUrl: null,
+      icon: "💬",
+      technologies: ["Go", "WebSockets", "SQLite", "JavaScript", "Real-time"],
+      featured: true,
     },
     {
-      title: "lem-in",
+      title: "Filler - AI Strategy Game",
       description:
-        "A program that describes an ant colony and generates paths and turns ants need to make from start to end",
-      githubUrl: "https://github.com/moseeh/Go-Projects/tree/main/lem-in",
-      icon: "🐜",
-      technologies: ["Go", "Graph Theory", "Pathfinding"],
-    },
-    {
-      title: "my-Sudoku",
-      description:
-        "A program that uses the backtracking algorithm to solve the sudoku puzzle",
-      githubUrl: "https://github.com/moseeh/my-sudoku",
-      icon: "🧩",
-      technologies: ["Go", "Backtracking", "Algorithms"],
-    },
-    {
-      title: "Kilimo-chain",
-      description:
-        "A blockchain based program that offers transparency of goods from the farm to the market",
-      githubUrl: "https://github.com/moseeh/kilimo-link",
-      icon: "🔗",
-      technologies: ["Blockchain", "Go", "Supply Chain"],
+        "An algorithmic strategy game where an AI bot competes to place pieces on a board efficiently. Implements heat map algorithms, pathfinding, and competitive AI logic to outmaneuver opponents by maximizing board coverage.",
+      githubUrl: "https://github.com/moseeh/filler",
+      liveUrl: null,
+      icon: "🎮",
+      technologies: ["Go", "Algorithms", "AI", "Game Theory", "Strategy"],
+      featured: false,
     },
     {
       title: "Groupie Tracker",
       description:
-        "A Go-based Program that reads data from a JSON API and displays it on a webpage",
-      githubUrl:
-        "https://github.com/moseeh/Go-Projects/tree/main/groupie-tracker",
+        "A web application that fetches and displays music artist data from multiple APIs. Features interactive UI, data visualization, and advanced filtering/search capabilities.",
+      githubUrl: "https://github.com/moseeh/Go-Projects/tree/main/groupie-tracker",
+      liveUrl: null,
       icon: "🎵",
-      technologies: ["Go", "JSON API", "Web Development"],
+      technologies: ["Go", "REST APIs", "HTML/CSS", "JavaScript"],
+      featured: false,
+    },
+    {
+      title: "Lem-in - Ant Colony Pathfinding",
+      description:
+        "An algorithm that finds the optimal paths for ants to traverse from start to end in a colony. Implements graph theory and pathfinding algorithms to minimize total turns.",
+      githubUrl: "https://github.com/moseeh/Go-Projects/tree/main/lem-in",
+      liveUrl: null,
+      icon: "🐜",
+      technologies: ["Go", "Graph Theory", "BFS/DFS", "Optimization"],
+      featured: false,
+    },
+    {
+      title: "my-ls - Linux Command Clone",
+      description:
+        "A faithful recreation of the Unix ls command with support for multiple flags and options. Handles file permissions, timestamps, and recursive directory traversal.",
+      githubUrl: "https://github.com/moseeh/Go-Projects/tree/main/my-ls-1",
+      liveUrl: null,
+      icon: "📁",
+      technologies: ["Go", "File Systems", "CLI", "Unix"],
+      featured: false,
     },
   ],
 
