@@ -29,6 +29,8 @@ function populateArticles() {
             <div class="article-content">
                 <h3 class="article-title">${article.title}</h3>
                 <p class="article-synopsis">${article.synopsis}</p>
+            </div>
+            <div class="article-footer">
                 <div class="article-tags">
                     ${article.tags
                       .map((tag) => `<span class="article-tag">#${tag}</span>`)
