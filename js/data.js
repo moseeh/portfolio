@@ -36,13 +36,13 @@ const portfolioData = {
 
   projects: [
     {
-      title: "Smart Road - Autonomous Traffic Simulation",
+      title: "Autonomous Traffic Simulation",
       description:
         "A real-time autonomous vehicle traffic simulation built in Rust using SDL2. Implements intelligent intersection management without traffic lights, featuring collision avoidance and optimized traffic flow algorithms.",
       githubUrl: "https://github.com/moseeh/smart-road",
       liveUrl: null,
       icon: "🚗",
-      technologies: ["Rust", "SDL2", "Algorithms", "Simulation", "Systems Programming"],
+      technologies: ["Rust", "SDL2", "Algorithms", "Simulation"],
       featured: true,
     },
     {
@@ -52,7 +52,7 @@ const portfolioData = {
       githubUrl: "https://github.com/moseeh/graphql",
       liveUrl: "https://moseeh.github.io/graphql/",
       icon: "📊",
-      technologies: ["GraphQL", "JavaScript", "JWT", "SVG", "Data Visualization"],
+      technologies: ["GraphQL", "JavaScript", "JWT", "Data Visualization"],
       featured: true,
     },
     {
@@ -62,7 +62,7 @@ const portfolioData = {
       githubUrl: "https://github.com/moseeh/real-time-forum",
       liveUrl: null,
       icon: "💬",
-      technologies: ["Go", "WebSockets", "SQLite", "JavaScript", "Real-time"],
+      technologies: ["Go", "WebSockets", "SQLite", "JavaScript"],
       featured: true,
     },
     {
