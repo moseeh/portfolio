@@ -401,9 +401,9 @@ nav {
 }
 
 /* About Section */
-.about {
+/* .about {
   background: var(--bg-secondary);
-}
+} */
 
 .about-terminal {
   background: var(--bg-card);
@@ -571,9 +571,9 @@ nav {
 }
 
 /* Skills Section */
-.skills {
+/* .skills {
   background: var(--bg-primary);
-}
+} */
 
 .skills-terminal {
   background: var(--bg-card);
@@ -663,9 +663,9 @@ nav {
 }
 
 /* Projects Section */
-.projects {
+/* .projects {
   background: var(--bg-secondary);
-}
+} */
 
 .projects-grid {
   display: grid;
@@ -782,9 +782,9 @@ nav {
 }
 
 /* Articles Section */
-.articles {
+/* .articles {
   background: var(--bg-primary);
-}
+} */
 
 .articles-terminal {
   background: var(--bg-card);
@@ -934,9 +934,9 @@ nav {
 }
 
 /* Contact Section */
-.contact {
+/* .contact {
   background: var(--bg-primary);
-}
+} */
 
 .contact-terminal {
   background: var(--bg-card);
@@ -1055,11 +1055,9 @@ nav {
 
 /* Footer */
 footer {
-  background: var(--bg-secondary);
   color: var(--text-primary);
   text-align: center;
   padding: 3rem 2rem;
-  border-top: 1px solid var(--border-color);
 }
 
 .social-links {
