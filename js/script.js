@@ -139,7 +139,13 @@ function populateProjects() {
                     <a href="${
                       project.githubUrl
                     }" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> SOURCE
+                        <i class="fab fa-github"></i> VIEW_CODE
+                    </a>
+                    <a href="${project.liveUrl || '#'}" 
+                       target="_blank" 
+                       class="project-link ${!project.liveUrl ? 'disabled' : ''}"
+                       ${!project.liveUrl ? 'onclick="return false;"' : ''}>
+                        <i class="fas fa-external-link-alt"></i> LIVE_DEMO
                     </a>
                 </div>
             </div>
