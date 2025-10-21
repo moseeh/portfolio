@@ -46,6 +46,16 @@ const portfolioData = {
       featured: true,
     },
     {
+      title: "GraphQL Profile Dashboard",
+      description:
+        "A personalized student dashboard that fetches and visualizes Zone01 profile data using GraphQL API. Features JWT authentication, interactive SVG graphs for XP tracking, project grades, audit statistics, and skills progression visualization.",
+      githubUrl: "https://github.com/moseeh/graphql",
+      liveUrl: "https://moseeh.github.io/graphql/",
+      icon: "📊",
+      technologies: ["GraphQL", "JavaScript", "JWT", "SVG", "Data Visualization"],
+      featured: true,
+    },
+    {
       title: "Real-Time Forum",
       description:
         "A full-stack real-time forum application with WebSocket support for instant messaging. Features user authentication, session management, and live updates without page refreshes.",
@@ -83,16 +93,6 @@ const portfolioData = {
       liveUrl: null,
       icon: "🐜",
       technologies: ["Go", "Graph Theory", "BFS/DFS", "Optimization"],
-      featured: false,
-    },
-    {
-      title: "my-ls - Linux Command Clone",
-      description:
-        "A faithful recreation of the Unix ls command with support for multiple flags and options. Handles file permissions, timestamps, and recursive directory traversal.",
-      githubUrl: "https://github.com/moseeh/Go-Projects/tree/main/my-ls-1",
-      liveUrl: null,
-      icon: "📁",
-      technologies: ["Go", "File Systems", "CLI", "Unix"],
       featured: false,
     },
   ],
