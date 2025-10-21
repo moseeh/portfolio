@@ -21,6 +21,17 @@
   box-sizing: border-box;
 }
 
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Base Styles */
 body {
   font-family: "JetBrains Mono", "Courier New", monospace;
@@ -123,6 +134,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 1rem;
+  }
 }
 
 .logo {
@@ -253,10 +270,10 @@ nav {
     transform: translate(0);
   }
   15% {
-    transform: translate(-2px, 2px);
+    transform: translate(-1px, 1px);
   }
   50% {
-    transform: translate(2px, -2px);
+    transform: translate(1px, -1px);
   }
 }
 
@@ -270,10 +287,10 @@ nav {
     transform: translate(0);
   }
   21% {
-    transform: translate(2px, 2px);
+    transform: translate(1px, 1px);
   }
   61% {
-    transform: translate(-2px, -2px);
+    transform: translate(-1px, -1px);
   }
 }
 
@@ -669,7 +686,7 @@ nav {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
   margin-top: 4rem;
 }
@@ -798,7 +815,7 @@ nav {
 
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
 }
@@ -1131,6 +1148,18 @@ footer {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -1156,13 +1185,18 @@ footer {
     display: flex;
   }
 
-  .hero-glitch {
-    font-size: 2.5rem;
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero .description {
+    font-size: 1rem;
   }
 
   .cta-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .form-row {
@@ -1202,15 +1236,22 @@ footer {
     height: 200px;
     margin: 0 auto;
   }
+
+  .terminal-title {
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-glitch {
-    font-size: 2rem;
-  }
-
   .section-title {
     font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .hero .description {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
   }
 
   .projects-grid {
@@ -1231,12 +1272,26 @@ footer {
 
   .contact-terminal,
   .about-terminal,
-  .skills-terminal {
+  .skills-terminal,
+  .articles-terminal {
     padding: 1rem;
   }
 
   .btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .terminal-title {
+    font-size: 0.7rem;
+  }
+
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
   }
 }
