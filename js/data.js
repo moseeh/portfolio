@@ -117,15 +117,14 @@ const portfolioData = {
       url: "https://dev.to/moseeh_52/understanding-osstat-vs-oslstat-in-go-file-and-symlink-handling-3p5d",
       tags: ["Go", "Linux", "Ubuntu", "Programming"],
     },
-    // {
-    //   title: "Building a Linux Command Clone: Lessons from my-ls",
-    //   synopsis:
-    //     "What I learned recreating the Linux 'ls' command from scratch. File system navigation, flag handling, and the beauty of Unix philosophy.",
-    //   readTime: "10 min read",
-    //   publishedDate: "2024-11-10",
-    //   url: "https://dev.to/moseeh_52/building-linux-command-clone-lessons",
-    //   tags: ["Go", "Systems Programming", "Unix"],
-    // },
+    {
+      title: "Two Paths to Safety: How Go and Rust Made Opposite Bets",
+      synopsis: "Go trusts developers with simplicity. Rust trusts the compiler with guarantees. A deep dive into why two modern languages solve the same problem in opposite ways.",
+      readTime: "8 min read",
+      publishedDate: "2025-10-31",
+      url: "https://dev.to/moseeh_52/two-paths-to-safety-how-go-and-rust-made-opposite-bets-2980",
+      tags: ["Go", "Rust", "Programming Languages", "Software Engineering"],
+    },
     {
       title:
         "Efficient File Reading in Go: Mastering bufio.NewScanner vs os.ReadFile",
