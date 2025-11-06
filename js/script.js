@@ -446,7 +446,7 @@ window.addEventListener("load", () => {
     "LOADING QUANTUM ALGORITHMS...",
     "ESTABLISHING SECURE CONNECTIONS...",
     "SYSTEM STATUS: READY",
-    "WELCOME TO THE MATRIX",
+    "WELCOME TO THE MATRIX!!!",
   ];
 
   console.log(
