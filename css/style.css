@@ -639,7 +639,6 @@ nav {
 }
 
 .skill-item::before {
-  content: "$ ";
   color: var(--primary-color);
   font-weight: bold;
 }
