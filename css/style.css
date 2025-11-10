@@ -691,8 +691,8 @@ nav {
 }
 
 .project-card {
-  background: var(--bg-card);
-  border: 2px solid var(--border-color);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 106, 0.05));
+  border: 2px solid var(--primary-color);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
