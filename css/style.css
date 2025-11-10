@@ -857,6 +857,11 @@ nav {
   box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
 }
 
+.latest-article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
+}
+
 .article-header {
   display: flex;
   justify-content: space-between;
