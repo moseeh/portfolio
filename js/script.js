@@ -17,8 +17,9 @@ function populateArticles() {
   const latestArticle = findLatestArticle(portfolioData.articles);
 
   portfolioData.articles.forEach((article) => {
+    const isLatest = article === latestArticle;
     const articleCard = document.createElement("div");
-    articleCard.className = "article-card scroll-reveal";
+    articleCard.className = `article-card scroll-reveal ${isLatest ? 'latest-article' : ''}`;
     articleCard.innerHTML = `
             <div class="article-header">
                 <div class="article-meta">
@@ -27,6 +28,7 @@ function populateArticles() {
                       article.publishedDate
                     )}</span>
                 </div>
+                ${isLatest ? '<div class="latest-badge"><i class="fas fa-star"></i> LATEST</div>' : ''}
             </div>
             <div class="article-content">
                 <h3 class="article-title">${article.title}</h3>
