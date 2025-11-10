@@ -700,6 +700,17 @@ nav {
   grid-template-rows: auto 1fr auto;
 }
 
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
 .project-card:hover {
   border-color: var(--primary-color);
   box-shadow: 0 0 40px rgba(0, 255, 136, 0.3);
