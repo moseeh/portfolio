@@ -14,6 +14,8 @@ function populateArticles() {
   const articlesGrid = document.getElementById("articlesGrid");
   articlesGrid.innerHTML = "";
 
+  const latestArticle = findLatestArticle(portfolioData.articles);
+
   portfolioData.articles.forEach((article) => {
     const articleCard = document.createElement("div");
     articleCard.className = "article-card scroll-reveal";
