@@ -25,8 +25,8 @@ function populateArticles() {
                 <div class="article-meta">
                     <span class="read-time">${article.readTime}</span>
                     <span class="publish-date">${formatDate(
-                      article.publishedDate
-                    )}</span>
+      article.publishedDate
+    )}</span>
                 </div>
                 ${isLatest ? '<div class="latest-badge"><i class="fas fa-star"></i> LATEST</div>' : ''}
             </div>
@@ -37,13 +37,12 @@ function populateArticles() {
             <div class="article-footer">
                 <div class="article-tags">
                     ${article.tags
-                      .map((tag) => `<span class="article-tag">#${tag}</span>`)
-                      .join("")}
+        .map((tag) => `<span class="article-tag">#${tag}</span>`)
+        .join("")}
                 </div>
                 <div class="article-actions">
-                    <a href="${
-                      article.url
-                    }" target="_blank" class="read-article-btn">
+                    <a href="${article.url
+      }" target="_blank" class="read-article-btn">
                         <i class="fas fa-external-link-alt"></i> READ_ARTICLE
                     </a>
                 </div>
@@ -56,18 +55,18 @@ function populateArticles() {
 // Find the latest article (handles ties with random selection)
 function findLatestArticle(articles) {
   if (!articles || articles.length === 0) return null;
-  
+
   // Find the most recent date
   const latestDate = articles.reduce((latest, article) => {
     const articleDate = new Date(article.publishedDate);
     return articleDate > latest ? articleDate : latest;
   }, new Date(articles[0].publishedDate));
-  
+
   // Get all articles with the latest date
-  const latestArticles = articles.filter(article => 
+  const latestArticles = articles.filter(article =>
     new Date(article.publishedDate).getTime() === latestDate.getTime()
   );
-  
+
   // If multiple articles share the same date, pick one randomly
   return latestArticles[Math.floor(Math.random() * latestArticles.length)];
 }
@@ -157,13 +156,12 @@ function populateProjects() {
                 <p class="project-description">${project.description}</p>
                 <div class="project-tech">
                     ${project.technologies
-                      .map((tech) => `<span class="tech-tag">${tech}</span>`)
-                      .join("")}
+        .map((tech) => `<span class="tech-tag">${tech}</span>`)
+        .join("")}
                 </div>
                 <div class="project-links">
-                    <a href="${
-                      project.githubUrl
-                    }" target="_blank" class="project-link">
+                    <a href="${project.githubUrl
+      }" target="_blank" class="project-link">
                         <i class="fab fa-github"></i> VIEW_CODE
                     </a>
                     <a href="${project.liveUrl || '#'}" 
@@ -252,13 +250,13 @@ function setupEventListeners() {
     const header = document.querySelector("header");
     const scrollProgress = document.getElementById("scrollProgress");
     const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    
+
     if (window.scrollY > 100) {
       header.style.background = "rgba(10, 10, 10, 0.95)";
     } else {
       header.style.background = "rgba(10, 10, 10, 0.9)";
     }
-    
+
     scrollProgress.style.width = scrollPercent + "%";
   });
 
