@@ -958,6 +958,95 @@ nav {
   margin-left: 0.5rem;
 }
 
+/* Latest Article Badge */
+.latest-badge {
+  background: linear-gradient(45deg, var(--accent-color), #ff8c42);
+  color: var(--bg-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+  animation: pulse-glow 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.latest-badge::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 3s infinite;
+}
+
+.latest-badge i {
+  animation: star-twinkle 1.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.7);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Latest Article Card Enhancement */
+.latest-article {
+  border-color: var(--accent-color) !important;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(0, 255, 136, 0.05));
+  position: relative;
+}
+
+.latest-article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+  animation: gradient-flow 3s ease-in-out infinite;
+}
+
+@keyframes gradient-flow {
+  0%, 100% {
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+  }
+  50% {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  }
+}
+
 .articles-footer {
   text-align: center;
   margin-top: 2rem;
