@@ -247,14 +247,19 @@ function setupEventListeners() {
     });
   });
 
-  // Header background on scroll
+  // Header background on scroll + Progress indicator
   window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
+    const scrollProgress = document.getElementById("scrollProgress");
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    
     if (window.scrollY > 100) {
       header.style.background = "rgba(10, 10, 10, 0.95)";
     } else {
       header.style.background = "rgba(10, 10, 10, 0.9)";
     }
+    
+    scrollProgress.style.width = scrollPercent + "%";
   });
 
   // Contact form submission
