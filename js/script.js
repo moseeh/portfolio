@@ -53,6 +53,25 @@ function populateArticles() {
   });
 }
 
+// Find the latest article (handles ties with random selection)
+function findLatestArticle(articles) {
+  if (!articles || articles.length === 0) return null;
+  
+  // Find the most recent date
+  const latestDate = articles.reduce((latest, article) => {
+    const articleDate = new Date(article.publishedDate);
+    return articleDate > latest ? articleDate : latest;
+  }, new Date(articles[0].publishedDate));
+  
+  // Get all articles with the latest date
+  const latestArticles = articles.filter(article => 
+    new Date(article.publishedDate).getTime() === latestDate.getTime()
+  );
+  
+  // If multiple articles share the same date, pick one randomly
+  return latestArticles[Math.floor(Math.random() * latestArticles.length)];
+}
+
 // Format date helper
 function formatDate(dateString) {
   const date = new Date(dateString);
