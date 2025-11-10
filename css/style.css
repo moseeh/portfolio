@@ -434,13 +434,24 @@ nav {
 } */
 
 .about-terminal {
-  background: var(--bg-card);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 106, 0.05));
   border: 2px solid var(--primary-color);
   border-radius: 8px;
   padding: 2rem;
   font-family: "JetBrains Mono", monospace;
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
   position: relative;
+}
+
+.about-terminal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .terminal-header {
@@ -609,13 +620,24 @@ nav {
 } */
 
 .skills-terminal {
-  background: var(--bg-card);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 106, 0.05));
   border: 2px solid var(--primary-color);
   border-radius: 8px;
   padding: 2rem;
   font-family: "JetBrains Mono", monospace;
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
   position: relative;
+}
+
+.skills-terminal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .skills-grid {
@@ -848,13 +870,24 @@ nav {
 } */
 
 .articles-terminal {
-  background: var(--bg-card);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 106, 0.05));
   border: 2px solid var(--primary-color);
   border-radius: 8px;
   padding: 2rem;
   font-family: "JetBrains Mono", monospace;
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
   position: relative;
+}
+
+.articles-terminal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .articles-grid {
@@ -1173,13 +1206,25 @@ nav {
 } */
 
 .contact-terminal {
-  background: var(--bg-card);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 106, 0.05));
   border: 2px solid var(--primary-color);
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+}
+
+.contact-terminal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .contact-content {
