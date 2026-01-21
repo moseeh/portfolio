@@ -76,14 +76,20 @@ const portfolioData = {
       featured: false,
     },
     {
-      title: "Groupie Tracker",
+      title: "GoDB - Lightweight Go Database",
       description:
-        "A web application that fetches and displays music artist data from multiple APIs. Features interactive UI, data visualization, and advanced filtering/search capabilities.",
-      githubUrl: "https://github.com/moseeh/Go-Projects/tree/main/groupie-tracker",
+        "A simple and efficient key-value database written in Go, designed for high-performance local storage. Supports basic CRUD operations, in-memory caching, and persistent file storage, making it suitable for lightweight applications and prototyping.",
+      githubUrl: "https://github.com/moseeh/godb",
       liveUrl: null,
-      icon: "🎵",
-      technologies: ["Go", "REST APIs", "HTML/CSS", "JavaScript"],
-      featured: false,
+      icon: "🗄️",
+      technologies: [
+        "Go",
+        "Database",
+        "CRUD",
+        "Persistence",
+        "In-Memory Storage",
+      ],
+      featured: true,
     },
     {
       title: "Lem-in - Ant Colony Pathfinding",
@@ -119,7 +125,8 @@ const portfolioData = {
     },
     {
       title: "Two Paths to Safety: How Go and Rust Made Opposite Bets",
-      synopsis: "Go trusts developers with simplicity. Rust trusts the compiler with guarantees. A deep dive into why two modern languages solve the same problem in opposite ways.",
+      synopsis:
+        "Go trusts developers with simplicity. Rust trusts the compiler with guarantees. A deep dive into why two modern languages solve the same problem in opposite ways.",
       readTime: "8 min read",
       publishedDate: "2025-10-31",
       url: "https://dev.to/moseeh_52/two-paths-to-safety-how-go-and-rust-made-opposite-bets-2980",
