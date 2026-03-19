@@ -73,7 +73,7 @@ function populateArticles() {
   portfolioData.articles.forEach((article) => {
     const isLatest = article === latestArticle;
     const articleCard = document.createElement("div");
-    articleCard.className = `article-card scroll-reveal ${isLatest ? 'latest-article' : ''}`;
+    articleCard.className = `article-card stagger-item ${isLatest ? 'latest-article' : ''}`;
     articleCard.innerHTML = `
             <div class="article-header">
                 <div class="article-meta">
@@ -181,7 +181,7 @@ function populateSkills() {
 
   portfolioData.skills.forEach((skill) => {
     const skillItem = document.createElement("div");
-    skillItem.className = "skill-item";
+    skillItem.className = "skill-item stagger-item";
     skillItem.innerHTML = `
             <div class="skill-header">
                 <div class="skill-name">${skill.name}</div>
@@ -200,7 +200,7 @@ function populateProjects() {
 
   portfolioData.projects.forEach((project) => {
     const projectCard = document.createElement("div");
-    projectCard.className = "project-card scroll-reveal";
+    projectCard.className = "project-card stagger-item";
     projectCard.innerHTML = `
             <div class="project-header">
                 <div class="project-icon">${project.icon}</div>
@@ -385,42 +385,72 @@ function setupMatrixCursor() {
   });
 }
 
-// 3D Binary Background Generator
-function createBinaryBackground() {
-  const binaryBg = document.getElementById("binaryBg");
-  const chars = ["0", "1"];
+// Matrix Rain Background
+function initMatrixRain() {
+  const canvas = document.getElementById("matrixCanvas");
+  const ctx = canvas.getContext("2d");
+  const fontSize = 14;
+  let columns, drops;
 
-  function createBinaryChar() {
-    const char = document.createElement("div");
-    char.className = "binary-char";
-    char.textContent = chars[Math.floor(Math.random() * chars.length)];
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    drops = new Array(columns).fill(1);
+  }
 
-    const x = Math.random() * window.innerWidth;
-    const animationDuration = 10 + Math.random() * 20;
-    const opacity = 0.1 + Math.random() * 0.3;
-    const size = 12 + Math.random() * 8;
+  resize();
 
-    char.style.left = x + "px";
-    char.style.fontSize = size + "px";
-    char.style.animationDuration = animationDuration + "s";
-    char.style.opacity = opacity;
+  // Katakana + digits character set
+  const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789";
 
-    binaryBg.appendChild(char);
+  function draw() {
+    ctx.fillStyle = "rgba(10, 10, 10, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = fontSize + "px JetBrains Mono, monospace";
 
-    setTimeout(() => {
-      if (char.parentNode) {
-        char.parentNode.removeChild(char);
+    for (let i = 0; i < columns; i++) {
+      const char = chars[Math.floor(Math.random() * chars.length)];
+      const x = i * fontSize;
+      const y = drops[i] * fontSize;
+
+      // Brighter head character
+      ctx.fillStyle = "#aaffcc";
+      ctx.fillText(char, x, y);
+
+      // Dimmer trail
+      ctx.fillStyle = "rgba(0, 255, 136, 0.8)";
+
+      if (y > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
       }
-    }, animationDuration * 1000);
+      drops[i]++;
+    }
   }
 
-  // Create initial batch
-  for (let i = 0; i < 50; i++) {
-    setTimeout(createBinaryChar, i * 100);
+  // Respect prefers-reduced-motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    draw();
+    return;
   }
 
-  // Continue creating characters
-  setInterval(createBinaryChar, 300);
+  // Throttle to ~30fps
+  let lastTime = 0;
+  function animate(time) {
+    if (time - lastTime > 33) {
+      draw();
+      lastTime = time;
+    }
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+
+  // Debounced resize
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resize, 250);
+  });
 }
 
 // Typewriter Effect
@@ -480,6 +510,17 @@ function setupScrollAnimations() {
         if (entry.target.classList.contains("skills-terminal")) {
           animateSkillLevels();
         }
+
+        // Stagger reveal for grid children
+        const staggerItems = entry.target.querySelectorAll(".stagger-item");
+        staggerItems.forEach((item, index) => {
+          item.style.transitionDelay = `${index * 100}ms`;
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              item.classList.add("active");
+            });
+          });
+        });
       }
     });
   }, observerOptions);
@@ -498,8 +539,183 @@ function animateSkillLevels() {
       if (levelFill) {
         levelFill.style.animation = "fillLevel 2s ease-out forwards";
       }
-    }, index * 100);
+    }, index * 100 + 500);
   });
+}
+
+// Interactive Command Terminal
+function setupCommandTerminal() {
+  const toggle = document.getElementById("terminalToggle");
+  const terminal = document.getElementById("commandTerminal");
+  const output = document.getElementById("terminalOutput");
+  const input = document.getElementById("terminalInput");
+  const closeBtn = document.getElementById("terminalClose");
+
+  if (!toggle || !terminal) return;
+
+  const history = [];
+  let historyIndex = -1;
+
+  function openTerminal() {
+    terminal.classList.add("open");
+    input.focus();
+  }
+
+  function closeTerminal() {
+    terminal.classList.remove("open");
+  }
+
+  toggle.addEventListener("click", () => {
+    if (terminal.classList.contains("open")) {
+      closeTerminal();
+    } else {
+      openTerminal();
+    }
+  });
+
+  closeBtn.addEventListener("click", closeTerminal);
+
+  function appendOutput(html) {
+    const line = document.createElement("div");
+    line.className = "output-line";
+    line.innerHTML = html;
+    output.appendChild(line);
+    output.scrollTop = output.scrollHeight;
+  }
+
+  function processCommand(cmd) {
+    appendOutput(`<span class="command-echo">$ ${cmd}</span>`);
+
+    const parts = cmd.trim().toLowerCase().split(/\s+/);
+    const command = parts[0];
+    const args = parts.slice(1).join(" ");
+
+    switch (command) {
+      case "help":
+        appendOutput(
+          `<span class="help-cmd">help</span> — show this message<br>` +
+          `<span class="help-cmd">about</span> — navigate to about<br>` +
+          `<span class="help-cmd">skills</span> — navigate to skills<br>` +
+          `<span class="help-cmd">projects</span> — navigate to projects<br>` +
+          `<span class="help-cmd">articles</span> — navigate to articles<br>` +
+          `<span class="help-cmd">contact</span> — navigate to contact<br>` +
+          `<span class="help-cmd">whoami</span> — who are you?<br>` +
+          `<span class="help-cmd">ls</span> — list sections<br>` +
+          `<span class="help-cmd">date</span> — current date<br>` +
+          `<span class="help-cmd">echo</span> — echo text<br>` +
+          `<span class="help-cmd">clear</span> — clear terminal`
+        );
+        break;
+      case "about":
+      case "skills":
+      case "projects":
+      case "articles":
+      case "contact":
+        const section = document.getElementById(command);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+          appendOutput(`Navigating to ${command}...`);
+        }
+        break;
+      case "home":
+        const home = document.getElementById("home");
+        if (home) {
+          home.scrollIntoView({ behavior: "smooth", block: "start" });
+          appendOutput("Navigating to home...");
+        }
+        break;
+      case "whoami":
+        appendOutput(
+          "visitor@portfolio — Curious human exploring the matrix.<br>" +
+          "Access level: <span class='command-echo'>GUEST</span>"
+        );
+        break;
+      case "ls":
+        appendOutput("home  about  skills  projects  articles  contact");
+        break;
+      case "date":
+        appendOutput(new Date().toString());
+        break;
+      case "echo":
+        appendOutput(cmd.trim().substring(5) || "");
+        break;
+      case "clear":
+        output.innerHTML = "";
+        return;
+      default:
+        appendOutput(
+          `<span class="error-text">${command}: command not found. Type 'help' for available commands.</span>`
+        );
+    }
+  }
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const cmd = input.value.trim();
+      if (cmd) {
+        history.push(cmd);
+        historyIndex = history.length;
+        processCommand(cmd);
+      }
+      input.value = "";
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      if (historyIndex > 0) {
+        historyIndex--;
+        input.value = history[historyIndex];
+      }
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      if (historyIndex < history.length - 1) {
+        historyIndex++;
+        input.value = history[historyIndex];
+      } else {
+        historyIndex = history.length;
+        input.value = "";
+      }
+    } else if (e.key === "Escape") {
+      closeTerminal();
+    }
+  });
+
+  // Keyboard shortcut: backtick to toggle (when not in input/textarea)
+  document.addEventListener("keydown", (e) => {
+    if (
+      e.key === "`" &&
+      e.target.tagName !== "INPUT" &&
+      e.target.tagName !== "TEXTAREA"
+    ) {
+      e.preventDefault();
+      if (terminal.classList.contains("open")) {
+        closeTerminal();
+      } else {
+        openTerminal();
+      }
+    }
+  });
+}
+
+// Active Nav Indicator
+function setupActiveNavIndicator() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          const activeLink = document.querySelector(
+            `.nav-links a[href="#${entry.target.id}"]`
+          );
+          if (activeLink) activeLink.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0, rootMargin: "-20% 0px -70% 0px" }
+  );
+
+  sections.forEach((section) => navObserver.observe(section));
 }
 
 // Random Glitch Effects
@@ -535,13 +751,6 @@ window.addEventListener("load", () => {
   );
 });
 
-// Handle window resize for binary background
-window.addEventListener("resize", () => {
-  // Recreate binary background on resize
-  const binaryBg = document.getElementById("binaryBg");
-  binaryBg.innerHTML = "";
-  setTimeout(createBinaryBackground, 100);
-});
 
 // Error handling for missing profile image
 document.addEventListener("DOMContentLoaded", () => {
