@@ -53,11 +53,14 @@ function runBootSequence() {
 
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", function () {
+  runBootSequence();
   initializePortfolio();
   setupEventListeners();
-  createBinaryBackground();
+  initMatrixRain();
   startTypewriterEffect();
   setupScrollAnimations();
+  setupActiveNavIndicator();
+  setupCommandTerminal();
 });
 
 // Populate Articles
