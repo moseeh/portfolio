@@ -405,7 +405,7 @@ function initMatrixRain() {
   const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789";
 
   function draw() {
-    ctx.fillStyle = "rgba(10, 10, 10, 0.05)";
+    ctx.fillStyle = "rgba(10, 10, 10, 0.15)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.font = fontSize + "px JetBrains Mono, monospace";
 
@@ -414,12 +414,9 @@ function initMatrixRain() {
       const x = i * fontSize;
       const y = drops[i] * fontSize;
 
-      // Brighter head character
-      ctx.fillStyle = "#aaffcc";
+      // Head character
+      ctx.fillStyle = "rgba(0, 255, 136, 0.3)";
       ctx.fillText(char, x, y);
-
-      // Dimmer trail
-      ctx.fillStyle = "rgba(0, 255, 136, 0.8)";
 
       if (y > canvas.height && Math.random() > 0.975) {
         drops[i] = 0;
