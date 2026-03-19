@@ -225,6 +225,26 @@
                 class="status-online">ONLINE</span></p>
     </footer>
 
+    <!-- Interactive Command Terminal -->
+    <button id="terminalToggle" class="terminal-toggle" title="Open Terminal"><span>&gt;_</span></button>
+    <div id="commandTerminal" class="command-terminal">
+        <div class="command-terminal-header">
+            <div class="terminal-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+            <span class="command-terminal-title">visitor@portfolio:~$</span>
+            <button id="terminalClose" class="terminal-close-btn">&times;</button>
+        </div>
+        <div id="terminalOutput" class="terminal-output"></div>
+        <div class="terminal-input-line">
+            <span class="terminal-prompt">$&nbsp;</span>
+            <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false"
+                placeholder="type 'help' for commands...">
+        </div>
+    </div>
+
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 </body>
