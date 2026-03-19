@@ -1,5 +1,56 @@
 // Main JavaScript for Portfolio
 
+// Boot Sequence
+function runBootSequence() {
+  const bootScreen = document.getElementById("bootScreen");
+  if (!bootScreen) return;
+
+  try {
+    if (sessionStorage.getItem("bootComplete")) {
+      bootScreen.remove();
+      return;
+    }
+  } catch (e) {
+    // sessionStorage unavailable, show boot anyway
+  }
+
+  document.body.classList.add("boot-active");
+  const messagesContainer = document.getElementById("bootMessages");
+
+  const messages = [
+    { text: '<span class="ok-tag">[OK]</span> INITIALIZING SYSTEM...', delay: 0 },
+    { text: '<span class="ok-tag">[OK]</span> LOADING NEURAL NETWORKS...', delay: 400 },
+    { text: '<span class="ok-tag">[OK]</span> ESTABLISHING SECURE CONNECTIONS...', delay: 400 },
+    { text: '<span class="ok-tag">[OK]</span> COMPILING PORTFOLIO MODULES...', delay: 400 },
+    { text: '<span class="ok-tag">[OK]</span> SYSTEM STATUS: READY', delay: 400 },
+    { text: '&gt; ACCESS GRANTED', delay: 600, isAccess: true },
+    { text: '&gt; WELCOME, VISITOR.', delay: 400, isAccess: true },
+  ];
+
+  let cumulativeDelay = 0;
+  messages.forEach((msg) => {
+    cumulativeDelay += msg.delay;
+    setTimeout(() => {
+      const line = document.createElement("div");
+      line.className = "boot-line" + (msg.isAccess ? " access-line" : "");
+      line.innerHTML = msg.text;
+      messagesContainer.appendChild(line);
+    }, cumulativeDelay);
+  });
+
+  // Fade out after all messages
+  setTimeout(() => {
+    bootScreen.classList.add("fade-out");
+    document.body.classList.remove("boot-active");
+    setTimeout(() => {
+      bootScreen.remove();
+    }, 800);
+    try {
+      sessionStorage.setItem("bootComplete", "true");
+    } catch (e) {}
+  }, cumulativeDelay + 800);
+}
+
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", function () {
   initializePortfolio();
