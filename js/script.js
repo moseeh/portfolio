@@ -176,20 +176,35 @@ function populatePersonalInfo() {
 
 // Populate Skills
 function populateSkills() {
-  const skillsGrid = document.getElementById("skillsGrid");
-  skillsGrid.innerHTML = "";
+  // Primary Stack
+  const primaryStack = document.getElementById("primaryStack");
+  primaryStack.innerHTML = "";
 
-  portfolioData.skills.forEach((skill) => {
-    const skillItem = document.createElement("div");
-    skillItem.className = "skill-item stagger-item";
-    skillItem.innerHTML = `
-            <div class="skill-header">
-                <div class="skill-name">${skill.name}</div>
-                
+  portfolioData.primaryStack.forEach((skill) => {
+    const card = document.createElement("div");
+    card.className = "primary-card stagger-item";
+    card.innerHTML = `
+            <div class="primary-card-header">
+                <span class="primary-card-name">${skill.name}</span>
+                <span class="primary-card-exp">${skill.experience}</span>
             </div>
-            <div class="skill-experience">${skill.experience}</div>
+            <div class="primary-card-context">${skill.context}</div>
         `;
-    skillsGrid.appendChild(skillItem);
+    primaryStack.appendChild(card);
+  });
+
+  // Toolkit
+  const toolkitGrid = document.getElementById("toolkitGrid");
+  toolkitGrid.innerHTML = "";
+
+  portfolioData.toolkit.forEach((skill) => {
+    const item = document.createElement("div");
+    item.className = "toolkit-item stagger-item";
+    item.innerHTML = `
+            <span class="toolkit-name">${skill.name}</span>
+            <span class="toolkit-exp">${skill.experience}</span>
+        `;
+    toolkitGrid.appendChild(item);
   });
 }
 
@@ -348,16 +363,15 @@ function handleFormSubmission(e) {
 // Setup Skill Hover Effects
 function setupSkillHoverEffects() {
   document.addEventListener("click", (e) => {
-    if (e.target.closest(".skill-item")) {
-      const skillItems = document.querySelectorAll(".skill-item");
-      skillItems.forEach((item) => {
-        const skillName = item.querySelector(".skill-name").textContent;
+    if (e.target.closest(".primary-card") || e.target.closest(".toolkit-item")) {
+      const items = document.querySelectorAll(".primary-card, .toolkit-item");
+      items.forEach((item) => {
         if (Math.random() > 0.7) {
           item.style.background = "rgba(0, 255, 136, 0.15)";
           item.style.borderLeft = "5px solid var(--primary-color)";
           setTimeout(() => {
-            item.style.background = "rgba(0, 255, 136, 0.05)";
-            item.style.borderLeft = "3px solid var(--primary-color)";
+            item.style.background = "";
+            item.style.borderLeft = "";
           }, 300);
         }
       });
@@ -529,14 +543,12 @@ function setupScrollAnimations() {
 
 // Animate Skill Levels
 function animateSkillLevels() {
-  const skillItems = document.querySelectorAll(".skill-item");
-  skillItems.forEach((item, index) => {
+  const items = document.querySelectorAll(".primary-card, .toolkit-item");
+  items.forEach((item, index) => {
     setTimeout(() => {
-      const levelFill = item.querySelector(".level-fill");
-      if (levelFill) {
-        levelFill.style.animation = "fillLevel 2s ease-out forwards";
-      }
-    }, index * 100 + 500);
+      item.style.opacity = "1";
+      item.style.transform = "translateY(0)";
+    }, index * 80 + 200);
   });
 }
 
