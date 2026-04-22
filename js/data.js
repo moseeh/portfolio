@@ -16,22 +16,37 @@ const portfolioData = {
     github: "moseeh",
   },
 
-  skills: [
-    { name: "GO", proficiency: "Expert", experience: "3+ years" },
-    { name: "RUST", proficiency: "Expert", experience: "2+ years" },
-    { name: "JAVASCRIPT", proficiency: "Advanced", experience: "2.5+ years" },
-    { name: "TYPESCRIPT", proficiency: "Advanced", experience: "2+ years" },
-    { name: "PYTHON", proficiency: "Intermediate", experience: "2+ years" },
-    { name: "REACT", proficiency: "Intermediate", experience: "2+ years" },
-    { name: "NODE.JS", proficiency: "Intermediate", experience: "2+ years" },
-    { name: "C++", proficiency: "Intermediate", experience: "2+ years" },
-    { name: "GIT", proficiency: "Advanced", experience: "3+ years" },
-    { name: "REST APIS", proficiency: "Advanced", experience: "2.5+ years" },
-    { name: "SQL", proficiency: "Intermediate", experience: "2+ years" },
-    { name: "DOCKER", proficiency: "Intermediate", experience: "2+ years" },
-    { name: "UNIX", proficiency: "Advanced", experience: "3+ years" },
-    { name: "AI", proficiency: "Beginner", experience: "1.5+ years" },
-    { name: "STATISTICS", proficiency: "Beginner", experience: "1.5+ years" },
+  primaryStack: [
+    {
+      name: "GO",
+      experience: "3+ years",
+      context: "REST APIs, real-time systems, pathfinding algorithms, database engines",
+    },
+    {
+      name: "RUST",
+      experience: "2+ years",
+      context: "Systems programming, simulations, CLI tools, performance-critical applications",
+    },
+    {
+      name: "JAVASCRIPT",
+      experience: "2.5+ years",
+      context: "SPAs, interactive UIs, DOM manipulation, full-stack web development",
+    },
+  ],
+
+  toolkit: [
+    { name: "TYPESCRIPT", experience: "2+ years" },
+    { name: "PYTHON", experience: "2+ years" },
+    { name: "REACT", experience: "2+ years" },
+    { name: "NODE.JS", experience: "2+ years" },
+    { name: "C++", experience: "2+ years" },
+    { name: "SQL", experience: "2+ years" },
+    { name: "DOCKER", experience: "2+ years" },
+    { name: "GIT", experience: "3+ years" },
+    { name: "REST APIS", experience: "2.5+ years" },
+    { name: "UNIX", experience: "3+ years" },
+    { name: "AI", experience: "1.5+ years" },
+    { name: "STATISTICS", experience: "1.5+ years" },
   ],
 
   projects: [
